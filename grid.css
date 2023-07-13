@@ -1,0 +1,54 @@
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px,2fr));
+    grid-template-rows: auto;
+    grid-gap: 10px;
+    grid-template-areas: 
+    "imag1 imag2"
+    "imag3 imag4"
+    "imag3 imag5";
+}
+#gallery .gallery2-img{
+    min-height: 20vh;
+    width: 80%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    border-radius: 3px;
+    z-index: 999;
+}
+
+#gallery .imag1 {
+    grid-area: imag1;
+    background-image: url("./people/img1.jpeg");
+ }
+ #gallery .imag2 {
+    grid-area: imag2;
+    background-image: url("./people/img2.jpeg");
+ }
+ #gallery .imag3 {
+    grid-area: imag3;
+    background-image: url("./people/img3.jpeg");
+ }
+ #gallery .imag4 {
+    grid-area: imag4;
+    background-image: url("./people/img4.jpeg");
+ }
+ #gallery .imag5 {
+    grid-area: imag5;
+    background-image: url("./people/img5.jpeg");
+ }
+ .images {
+    padding: 15px 0px 15px 40px;
+    display: flex;
+    justify-content: center;
+ }
+ @media screen and (max-width: 780px) {
+    #gallery {
+       display: flex;
+       flex-direction: column;
+       margin-top: 70px;
+    }
+
+ }
